@@ -6,7 +6,7 @@ from lexicon.lexicon_en import LEXICON_EN
 router = Router()
 user_states = {}
 
-url = 'https://096a-176-213-104-154.ngrok-free.app'
+url = 'https://5.44.41.194'
 
 @router.message(CommandStart())
 async def process_start_command(message: Message):
@@ -15,7 +15,7 @@ async def process_start_command(message: Message):
         args = message.text.split()[1]
     except:
         args = None
-    path_to_photo = "bot/img/start_img.jpg"
+    path_to_photo = "/var/www/tma2/bot/img/start_img.jpg"
 
     if args:
         inline_kb = InlineKeyboardMarkup(inline_keyboard=[
